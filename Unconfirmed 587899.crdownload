@@ -1,0 +1,34 @@
+n=eval(input("(2) 2 Digit LCM Or \n(3) 3 Digit LCM\n N:"))
+res= None
+while True:
+    if n<0:
+        print("N cannot be a negative number")
+        res=False
+    break
+if res==None:
+    if n ==2:
+        num1=eval(input("Enter number 1:"))
+        num2=eval(input("Enter number 2:"))
+        if num1>num2:
+            greater=num1
+        else:
+            greater=num2
+        while True:
+            if(greater%num1==0)or(greater%num2==0):
+                lcm=greater
+                gcd=gcd(num1,num2)
+                break
+            greater+=1
+        print("The LCM is:",lcm)
+        print("The GCD is:",gcd)
+    
+    elif n ==3:
+        x = int(input("Number 1: "))
+        y = int(input("Number 2: "))
+        z = int(input("Number 3: "))
+        gcd2 = gcd(y, z)
+        gcd3 = gcd(x, gcd2)
+        lcm2 = y*z // gcd2
+        lcm3 = x*lcm2 // gcd(x, lcm2)
+        print("The LCM is:",lcm3)
+        print("The GCD is:",gcd3)
