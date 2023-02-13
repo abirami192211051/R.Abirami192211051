@@ -1,0 +1,8 @@
+n=int(input("enter the number of rows:"))
+for i in range(n):
+    print(' '*(n-i),end=' ')
+    print(' '.join(map(str,str(11**i))))
+sum=0
+row=int(input("enter the row number:"))
+sum=sum+(1 << row-1)
+print(sum)
